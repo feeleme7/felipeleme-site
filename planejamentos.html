@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planejamentos - Felipe Leme</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --x: 50%;
+      --y: 50%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: radial-gradient(circle at var(--x) var(--y), #1e1e1e, #0a0a0a);
+      transition: background 0.1s ease;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .back {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .back:hover {
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    li {
+      background: #2a2a2a;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #333;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Planejamentos</h1>
+    <a href="index.html" class="back"><i class="fas fa-arrow-left"></i> Voltar</a>
+  </header>
+
+  <h2>O que estou construindo</h2>
+  <ul>
+    <li>✔️ Criar site pessoal com efeito de fundo e nome animado</li>
+    <li>🔄 Desenvolver aplicativo com IA para análise de renda fixa</li>
+    <li>📊 Criar painel de visualização para investimentos</li>
+    <li>🤖 Implementar chatbot inteligente no site</li>
+    <li>🔐 Adicionar sistema de login para usuários</li>
+    <li>🚀 Lançar versão beta até novembro de 2025</li>
+  </ul>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.documentElement.style.setProperty('--x', `${x}%`);
+      document.documentElement.style.setProperty('--y', `${y}%`);
+    });
+  </script>
+</body>
+</html>
